@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<!--
+	Highlights by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/timeline.css" />
+		<script src="js/modernizr.custom.js"></script>
+	
+		<title>数据挖掘创新赛成果展示</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>	
+			<div class="container" style="margin:0;padding:0;width:100%;">
+			<section id="header">
+				<header class="major">
+					<h1><p>数据挖掘创新赛成果展示</p></h1>
+					<h1>基于用户协同过滤算法的图书推荐系统</h1>
+					<h2>设计者:&nbsp;袁毓堃&nbsp;&nbsp;任开旭&nbsp;&nbsp;王煜辉</h2>
+					<!--<p>A fun little { responsive } single pager by <a href="http://html5up.net">HTML5 UP</a></p>-->
+					
+				</header>
+				<div class="container">
+					<ul class="actions">
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main special">
+				<div class="container">
+					<!--<span class="image fit primary"><img src="images/pic01.jpg" alt="" style="max-width:100%;"/></span>-->
+					<div class="content">
+						<header class="major">
+							<h2></h2>
+							<h2>任务描述</h2>
+						</header>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							随着信息技术和互联网的发展，人们逐渐从信息匮乏的时代走入了信息过载的时代。在这个时代，找到自己
+							感兴趣的信息是一件非常困难的事情。为了解决信息过载的问题，已经有无数科学家和工程师提出了很多天才
+							的解决方案，其中代表性的解决方案是分类目录和搜索引擎。但是随着互联网规模的不断扩大，分类目录网站
+							只能覆盖少量的热门网站，越来越不能满足用户的需求；而搜索引擎需要用户主动提供准确的关键词来寻找信
+							息，但当用户无法找到准确描述自己需求的关键词时，搜索引擎就无能为力了，由此一种帮助用户快速发现有
+							用信息的推荐系统便应用而生。推荐系统不需要用户提供明确的需求，而是通过分析用户的历史行为给用户的
+							兴趣建模，从而主动给用户推荐能够满足他们兴趣和需求的信息。</p>
+							<!--<img src="http://i.imgur.com/eYfqlHw.jpg" width="450" height="250" style="max-width:100%;">-->
+							<img src="./pc03.jpg" width="450" height="250" style="max-width:100%;">
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							为了能够让学生更好更快地发现自己所需的书籍，本次我们选取图书馆借阅信息，根据学生借阅历史，发掘学
+							生的需求和兴趣，促进营造更好的学习氛围，同时在一定程度上有助于提高图书馆的借阅量。本次数据竞赛提
+							供的图书借阅数据共包含18999条有效借阅信息，来源于6134个读者，涉及12516本图书。通过多次尝试，我们
+							最终选择基于用户的协同过滤推荐算法为已有用户推荐最符合其兴趣的10本图书，同时为新用户推荐最热门
+							的10本图书。为了更好和直观地看到图书推荐效果和便于开发扩展性应用，我们团队编写了网站展示我们的思
+							路和成果，同时编写了图书推荐APP，不仅实现了快速为指定用户推荐图书，同时也为日后进行平台扩展奠定
+							良好的基础。
+						</p>			
+					</div>
+					<!--<a href="#two" class="goto-next scrolly">Next</a>-->
+				</div>
+			</section>
+			
+			<section id="one" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>数据格式</h2>
+						</header>
+						<p>本次数据挖掘比赛，我们使用了学校图书馆借阅记录的数据，利用该数据进行图书推荐系统的设计和改进：</p>
+						<img src="./data.png" width="450" height="250" style="max-width:100%;">
+						<p>我们主要使用了学号和图书名称两个变量，在建模之前我们对数据进行了预处理，剔除了两项无用变量，
+						并对书籍和学号进行了统计，以书籍和学号的数量关系为依据，进行模型测试，最终测得改进型基于用户的协同过滤算法(UserIIF)
+						为最优，作为图书推荐系统的标准模型。</p>
+					</div>
+				</div>
+			</section>
+			
+		<!--alg section-->
+			<section id="four" class="main">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+						<h2>算法设计</h2>
+						</header>
+						<blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本次比赛中，我们使用的图书馆借阅记录一共18999条，涵盖6134个读者，涉及12516本图书，
+						我们采用准确率/召回率评测推荐算法的精度，最终测得<strong>改进型基于用户的协同过滤算法(UserIIF)</strong>
+						为最优，因此我们选用该算法建立图书推荐系统。<br/>
+						<!--<img src="http://i.imgur.com/oSiMZWx.png" width="200" height="90" style="max-width:100%;">
+						<img src="http://i.imgur.com/Xqu8zgS.png" width="200" height="90" style="max-width:100%;">-->
+						<img src="./images/eff.png" width="200" height="90" style="max-width:100%;">
+						<img src="./images/effc.png" width="200" height="90" style="max-width:100%;">
+						</blockquote>
+						
+						<section>
+							<h3>算法简介</h3>
+							<p>基于用户的协同过滤算法(UserCF)主要包括两个步骤:
+							<br/>1.找到和目标用户兴趣相似的用户集合;
+							<br/>2.找到这个集合中的用户喜欢的，且目标用户没有听说过的物品推荐给目标用户。
+							<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先我们计算每一对用户相互之间的关联程度，协同过滤算法主要利用行为的相似度
+							计算兴趣的相似度。给定用户u和用户v，令N(u)表示用户u曾经有过正反馈的物品集合，令N(v)
+							为用户v曾经有过正反馈的物品集合。我们采用Jaccard公式来计算用户u、v之间的兴趣相似度，
+							用矩阵W[u][v]来存储运算结果。如计算如下的兴趣相似度，我们采取Jaccard公式即可获得结果：
+							
+							<!--<br/><img src="http://i.imgur.com/rtddSdp.png" width="360" height="270" style="max-width:100%;">-->
+							<br/><img src="./images/alg.png" width="360" height="270" style="max-width:100%;">
+							
+							<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了减少热门公共书籍对于推荐结果的影响，我们采用UserCF算法的改进版，通过惩罚
+							用户u和用户v共同兴趣列表中热门物品来提高推荐的准确性，即改进版的UserIIF算法。
+							
+							<!--<br/><img src="http://i.imgur.com/e8uK8xo.png" width="230" height="160" style="max-width:100%;">-->
+							<br/><img src="./images/IIF.png" width="230" height="160" style="max-width:100%;">
+							
+							<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们使用python进行数据的生成，并将其导入到数据库当中：
+							<pre><code>
+def UserSimilarity(train):
+	# build inverse table for item_users
+	item_users = dict()
+	for u, items in train.items():
+		for i in items.keys():
+			if i not in item_users:
+				item_users[i] = set()
+				item_users[i].add(u)
+	#calculate co-rated items between users
+	
+	C = dict()
+	N = dict()
+	for i, users in item_users.items():
+		for u in users:
+			N[u] += 1
+		for v in users:
+			if u == v:
+				continue
+			C[u][v] += 1 / math.log(1 + len(users))
+	#calculate finial similarity matrix W
+	
+	W = dict()
+	for u, related_users in C.items():
+		for v, cuv in related_users.items():
+			W[u][v] = cuv / math.sqrt(N[u] * N[v])
+			
+	return W
+							</code></pre>
+							<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在计算出每一对用户之间的兴趣相似度后，我们就可以利用该兴趣相似度矩阵进行兴趣图
+							书的排名。对于一个用户A，其对于书籍r的感兴趣程度，就可以量化为数据的形式，其等于所
+							有借阅该书的用户与用户A兴趣相似度的总和。我们使用pyhton实现了相关数据的生成和处理：
+							<br/>
+							<pre><code>
+def Recommend(user, train, W):
+	rank = dict()
+	interacted_items = train[user]
+	for v, wuv in sorted(W[u].items, key=itemgetter(1), \
+		reverse=True)[0:K]:
+	for i, rvi in train[v].items:
+		if i in interacted_items:
+			#we should filter items user interacted before
+			continue
+		rank[i] += wuv * rvi
+		return rank
+							</code></pre>
+							<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在获得用户图书兴趣度的推荐排名后，我们选择10本排名最高的图书推荐给用户。由于本次进行数据
+							挖掘的数据较少，因此会出现无关联的情况，即该用户所借书籍无其他人借阅。我们采取最流行算法
+							向用户推荐借阅量最高的10本书，供用户选择。
+							<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们使用python绘图工具进行了数据可视化处理，可以更加直观地查看到我校热门书籍的借阅情况：
+							<!--<img src="http://i.imgur.com/m4mo68u.png" width="450" height="300" style="max-width:100%;">-->
+							<img src="./images/draw.png" width="450" height="300" style="max-width:100%;">
+							</p>
+						</section>
+						
+						</section>
+						
+<!-------------------------------------------------------->						
+			
+			<section id="one" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>成果展示</h2>
+						</header>
+						<p>为了将数据挖掘创新成果运用到实际生活当中来，我们团队开发了一款手机app，旨在方便同学们能够
+						更加便捷地获取学校图书推荐信息。</p><br>
+						<h2>1.用户初始化操作界面</h2>
+						<img src="http://i.imgur.com/qsT0O9p.jpg" width="337" height="600" style="max-width:100%;">
+						<p></p>
+						<h2>2.输入学号查询界面</h2>
+						<img src="http://i.imgur.com/ttu8FmZ.jpg" width="337" height="600" style="max-width:100%;">
+						<p></p>
+						<h2>3.查询结果显示界面</h2>
+						<img src="http://i.imgur.com/s2qVxOc.jpg" width="337" height="600" style="max-width:100%;">
+						<p></p>
+						
+						
+						<!--
+						<h2>4.视频展示</h2>
+						
+						<video width="337px" height="600px" controls="controls"> 
+						<source src="demo.mp4" type="video/mp4"></source> 
+						your browser does not support the video tag 
+						</video> 
+						<p>(加载较慢，请耐心等待。。。。^$^)</p>
+						-->
+						
+						
+						<!--<EMBED SRC="demo.mp4" autostart=false loop=false width="400" height="650" style="max-width:100%;">-->
+						<!--
+						<video width="400" height="650" controls="controls" style="max-width:100%">
+							  <source src="demo.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+							</video>
+						-->	
+						<p></p>
+						<p>Android客户端:<a href="./app-debug.apk">App下载</a></p>
+						<!--<p>Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum.</p>-->
+					</div>
+				</div>
+			</section>
+			
+		<!-- Two -->
+			<section id="two" class="main special">
+				<div class="container">
+					<div class="content">
+						<header class="major">
+							<h2>未来展望</h2>
+						</header>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基于用户的协同过滤算法是推荐系统中最古老的算法。
+						该算法在1992年被提出。作为推荐系统领域中最著名的算法之一，该算法在实际生活有着广泛的运
+						用。基于用户的协同过滤算法设计的推荐系统已经被广泛地运用在实际生活当中，成为推进生活
+						智能化、便捷化不可或缺的一部分。我校图书馆借阅历史纪录数据具有巨大的挖掘价值，通过整
+						合和分析隐藏在一条条借阅记录中的信息，我们可以实现智能化的图书资源推送，了解我校学生
+						学术兴趣倾向所在，分析我校图书馆图书资源的使用热度情况，合理化地进行学校图书资源的分配
+						和管理。</p>
+						
+						<img src="http://i.imgur.com/rfWGyCo.jpg" width="450" height="250" style="max-width:100%;">
+						<P></P>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如今，移动端进行个人活动的管理已经成为了人们便捷
+						生活化重要的一部分，校园生活也不例外。
+						因而我们选择了通过手机App端展示数据挖掘成果，建立移动端智能推荐的图书馆管理系统，方便
+						同学们获取图书推荐资源，更加便捷地开展学习生活。我们也希望以本APP为基础平台，逐步扩展该
+						系统功能，实现个人图书借阅和管理，电子资料的在线共享等功能，方便同学们的日常生活。</p>
+						<ul class="icons-grid">
+							<li>
+								<span class="icon major fa-camera-retro"></span>
+								<h3>图书智能推荐</h3>
+							</li>
+							<li>
+								<span class="icon major fa-pencil"></span>
+								<h3>图书动态管理</h3>
+							</li>
+							<li>
+								<span class="icon major fa-code"></span>
+								<h3>电子资料共享</h3>
+							</li>
+							<li>
+								<span class="icon major fa-coffee"></span>
+								<h3>便捷借阅管理</h3>
+							</li>
+						</ul>
+					</div>
+					<!--<a href="#three" class="goto-next scrolly">Next</a>-->
+				</div>
+			</section>
+			
+		<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<header class="major">
+						<h2>代码展示</h2>
+						<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们通过github共享了本次比赛的相关代码，包括
+						图书推荐系统模型的实现代码，手机APP端源代码，欢迎相互交流及指正。</h3>
+							
+						<a href="https://github.com/MrYuan123/data_analysis">推荐系统模型</a>
+						</br></br>
+						<a href="https://github.com/MrYuan123/BUPT_library">App实现源代码</a>
+					</header>
+					
+				</div>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon alt fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<!--<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>-->
+						<li>© Copyright 2016-11-15. designed by 数据挖掘机大队. All rights reserved.</li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+		
+		<!--添加头-->
+		{% if site.duoshuo_username %}
+		
+		<script type="text/javascript">
+		    // dynamic User by Hux
+		    var _user = '{{site.duoshuo_username}}';
+
+		    // duoshuo comment query.
+		    var duoshuoQuery = {short_name: _user };
+		    (function() {
+		        var ds = document.createElement('script');
+		        ds.type = 'text/javascript';ds.async = true;
+		        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		        ds.charset = 'UTF-8';
+		        (document.getElementsByTagName('head')[0]
+		         || document.getElementsByTagName('body')[0]).appendChild(ds);
+		    })();
+		</script>
+		
+		{% endif %}
+		
+		
+	</body>
+</html>

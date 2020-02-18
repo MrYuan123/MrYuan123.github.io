@@ -1,0 +1,99 @@
+# Site settings
+title: Leonard Yuan's Blog
+SEOTitle: Leonard Yuan's Blog
+header-img: img/home_bg.jpg
+email:
+description: "For Personal Blog"
+keyword: "程序员,网络工程"
+url: "https://mryuan123.github.io/"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+
+
+# SNS settings
+RSS: false
+#weibo_username:
+zhihu_username:   YYY
+github_username:  MrYuan123
+facebook_username:  Leonard Yuan
+# linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 6
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+##duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+##duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+# ba_track_id: [your track id]
+
+# Google Analytics
+##ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+##ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # 侧边框设置
+sidebar-about-description: "学习使我快乐，</br>学习让我升华！"   #个人简介
+sidebar-avatar: /img/header.jpg      # 使用照片的位置
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "Forec",
+        href: "http://forec.cn/"
+    },
+    {
+        title: "Seagullbird",
+        href: "http://seagullbird.github.io/"
+    },
+]
